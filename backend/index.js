@@ -10,6 +10,16 @@ app.use((req, res, next) => {
     next();
   });
 
+app.get("/", (req, res) => {
+    fs.readFile("database.json", "utf8", (err,data) => {
+        if(err) throw err;
+        const allData = JSON.parse(data);
+        res.status(200).json({
+            allData
+        });
+    })
+})
+
 app.post('/newData', (req, res) => {
     const inputData = req.body;
     fs.readFile("database.json", "utf8", (err,data) => {

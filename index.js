@@ -1,3 +1,8 @@
+let date = new Date();
+let todayDate = date.getDate();
+let addDate = document.getElementById("today");
+addDate.innerHTML = addDate.innerHTML + " (" + todayDate + " Jan )";
+
 let insta = document.getElementById("insta");
 function instaButton ()
 {
@@ -55,4 +60,5 @@ async function submitForm() {
 
     const result = await frontendToBackend();
 
-}
+};
+

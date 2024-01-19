@@ -8,11 +8,17 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div class="container">
+    <div id="container">
+      <center>
+        <nav>
+          <button type="button"><a href="/" onclick="route()">Today's Report</a></button>
+          <button type="button"><a href="/cardInfo.html" onclick="route()">Complete Report</a></button>
+        </nav>
+      </center>
       <div class="today-form">
         <form>
           <div class="segment">
-            <h1>Today's Report</h1>
+            <h1 id="today">Today's Report</h1>
           </div>
           <label>
             <input type="text" id="wht" placeholder="What happened today ?" />
@@ -59,3 +65,4 @@
 </html>
 
 <script src="index.js"></script>
+<!-- <script src="router.js"></script> -->
